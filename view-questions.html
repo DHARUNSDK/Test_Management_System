@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Questions by Category</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>View Questions</h1>
+  </header>
+  <section>
+    <label for="category">Select Category:</label>
+    <select id="category">
+      <option value="mcq">MCQs</option>
+      <option value="subjective">Subjective Questions</option>
+      <option value="coding">Coding Challenges</option>
+    </select>
+    <button id="view-questions-btn">View Questions</button>
+    <ul id="question-list"></ul>
+  </section>
+</body>
+<script>
+  document.getElementById("view-questions-btn").addEventListener("click", () => {
+    const category = document.getElementById("category").value;
+    document.getElementById("question-list").innerHTML = `<li>Questions for ${category} will appear here.</li>`;
+  });
+</script>
+</html>
